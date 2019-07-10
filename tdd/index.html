@@ -1,104 +1,111 @@
 <html>
   <head>
     <title>TDD | gio.codes</title>
+    <link rel="stylesheet" href="simple-grid.min.css"> <!-- https://simplegrid.io/ -->
   </head>
   <body>
-    <h1>Test Driven Development in Swift</h1>
-    <h4>A course by <a href="https://gio.codes">Gio</a>, author of <a href="https://www.mokacoding.com">mokacoding.com</a></h4>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Test Driven Development in Swift</h1>
+          <h4>A course by <a href="https://gio.codes">Gio</a>, author of <a href="https://www.mokacoding.com">mokacoding.com</a></h4>
 
-    <h3>Tentative Table of Contents</h3>
+          <h3>Tentative Table of Contents</h3>
 
-    <h4 id="toc_4">1. Introduction</h4>
-    <p><em>What the fuss is all about.</em></p>
+          <h4 id="toc_4">1. Introduction</h4>
+          <p><em>What the fuss is all about.</em></p>
 
-    <ul>
-      <li>What&#39;s a test</li>
-      <li>Why testing</li>
-      <li>TDD 101</li>
-      <li>TDD vs Testing</li>
-    </ul>
+          <ul>
+            <li>What&#39;s a test</li>
+            <li>Why testing</li>
+            <li>TDD 101</li>
+            <li>TDD vs Testing</li>
+          </ul>
 
-    <h4 id="toc_5">2. How to TDD a new object</h4>
-    <p><em>Let's build a list view data source from scratch driven by tests.</em></p>
+          <h4 id="toc_5">2. How to TDD a new object</h4>
+          <p><em>Let's build a list view data source from scratch driven by tests.</em></p>
 
-    <!--
-    <ul>
-      I want to talk about this for sure, but this might not be the best place after all.
-      <li>What if your app was a CLI? <em>To effectively TDD iOS applications we need to keep as much logic outside the scope of <code>UIKit</code> as possible, treating the framework only as the delivery layer for our information to the user, and for the user interactions to our business logic.</em></li>
-      <li>TDD your first property: <code>MenuDataSource</code> number of sections.</li>
-      <li>TDD your first method: number of rows in section.</li>
-      <li>Get <code>Pizza</code> for row in section
+          <!--
+            <ul>
+            I want to talk about this for sure, but this might not be the best place after all.
+            <li>What if your app was a CLI? <em>To effectively TDD iOS applications we need to keep as much logic outside the scope of <code>UIKit</code> as possible, treating the framework only as the delivery layer for our information to the user, and for the user interactions to our business logic.</em></li>
+            <li>TDD your first property: <code>MenuDataSource</code> number of sections.</li>
+            <li>TDD your first method: number of rows in section.</li>
+            <li>Get <code>Pizza</code> for row in section
 
-        <ul>
-          <li>The refactor step in red, green, refactor.</li>
-        </ul></li>
-    </ul>
-      -->
+            <ul>
+            <li>The refactor step in red, green, refactor.</li>
+            </ul></li>
+            </ul>
+          -->
 
-    <h4 id="toc_6">3. How to put a <code>UIViewController</code> in a test harness</h4>
-      <p><em>View controllers can be tested like any other object, as long as you are aware of a few gotchas.</em></p>
+          <h4 id="toc_6">3. How to put a <code>UIViewController</code> in a test harness</h4>
+          <p><em>View controllers can be tested like any other object, as long as you are aware of a few gotchas.</em></p>
 
-    <ul>
-      <li>How to setup the application scaffold and remove Xcode&#39;s unnecessary boilerplate</li>
-      <li>TDD adding a view controller to the app</li>
-      <li>View controller life cycle and tests</li>
-    </ul>
+          <ul>
+            <li>How to setup the application scaffold and remove Xcode&#39;s unnecessary boilerplate</li>
+            <li>TDD adding a view controller to the app</li>
+            <li>View controller life cycle and tests</li>
+          </ul>
 
-    <h4 id="toc_7">4. How to test the contents of the UI</h4>
-    <p><em>How to apply the humble view pattern to split what should be displayed from how it should be displayed.</em></p>
+          <h4 id="toc_7">4. How to test the contents of the UI</h4>
+          <p><em>How to apply the humble view pattern to split what should be displayed from how it should be displayed.</em></p>
 
-    <h4 id="toc_8">5. How to change existing code driven by tests</h4>
-    <p><em>TDD is not only a tool to create new code, it also allows to change existing one.</em></p>
+          <h4 id="toc_8">5. How to change existing code driven by tests</h4>
+          <p><em>TDD is not only a tool to create new code, it also allows to change existing one.</em></p>
 
-    <h4 id="toc_9">6. How to test delegates</h4>
-    <p><em>You can write test doubles to inspect how components interact with each other, these are called Spies.</em></p>
+          <h4 id="toc_9">6. How to test delegates</h4>
+          <p><em>You can write test doubles to inspect how components interact with each other, these are called Spies.</em></p>
 
-    <h4 id="toc_10">7. How to TDD code talking with the network</h4>
-    <p><em>We'll look at the different approaches to testing code interfacing with hte network and their tradeoffs</em></p>
+          <h4 id="toc_10">7. How to TDD code talking with the network</h4>
+          <p><em>We'll look at the different approaches to testing code interfacing with hte network and their tradeoffs</em></p>
 
-    <h4 id="toc_11">8. How to TDD code storing data</h4>
-    <p><em>How to abstract the statefulness for storage behind a protocol, how to use a Fake test double to have an in-memory storage in the tests.</em> </p>
+          <h4 id="toc_11">8. How to TDD code storing data</h4>
+          <p><em>How to abstract the statefulness for storage behind a protocol, how to use a Fake test double to have an in-memory storage in the tests.</em> </p>
 
-    <h4 id="toc_12">9. How to TDD code talking with third-party dependencies</h4>
-    <p><em>How to use a Dummy test double to satisfy a dependency requirement with something that doesn&#39;t affect the behavior of the system under test.</em></p>
+          <h4 id="toc_12">9. How to TDD code talking with third-party dependencies</h4>
+          <p><em>How to use a Dummy test double to satisfy a dependency requirement with something that doesn&#39;t affect the behavior of the system under test.</em></p>
 
-    <h4 id="toc_13">10. How to fix a bug with TDD</h4>
-    <p><em>When you find a bug, write a test to reproduce it, then use the feedback from the TDD loop to implement a fix.</em></p>
+          <h4 id="toc_13">10. How to fix a bug with TDD</h4>
+          <p><em>When you find a bug, write a test to reproduce it, then use the feedback from the TDD loop to implement a fix.</em></p>
 
-    <h4 id="toc_14">11. Testing Behaviour vs. Testing Implementation</h4>
+          <h4 id="toc_14">11. Testing Behaviour vs. Testing Implementation</h4>
 
-    <p><em>Why focusing on testing behaviour is valuable in the long run.</em></p>
+          <p><em>Why focusing on testing behaviour is valuable in the long run.</em></p>
 
-    <h4 id="toc_15">Conclusion</h4>
+          <h4 id="toc_15">Conclusion</h4>
 
-    <ul>
-      <li>TDD as a software development philosophy.
+          <ul>
+            <li>TDD as a software development philosophy.
 
-        <ul>
-          <li>Writing tests first doesn&#39;t actually make you slower</li>
-          <li>It&#39;s all about the feedback loop</li>
-        </ul></li>
-    </ul>
+              <ul>
+                <li>Writing tests first doesn&#39;t actually make you slower</li>
+                <li>It&#39;s all about the feedback loop</li>
+              </ul></li>
+          </ul>
 
-    <h4 id="toc_16">Cheat-sheet</h4>
+          <h4 id="toc_16">Cheat-sheet</h4>
 
-    <ul>
-      <li>Xcode testing keyboard shortcuts</li>
-      <li>Asynchronous expectation</li>
-      <li>Fake</li>
-      <li>Stub</li>
-      <li>Spy</li>
-      <li>Dummy</li>
-    </ul>
+          <ul>
+            <li>Xcode testing keyboard shortcuts</li>
+            <li>Asynchronous expectation</li>
+            <li>Fake</li>
+            <li>Stub</li>
+            <li>Spy</li>
+            <li>Dummy</li>
+          </ul>
 
-    <h4 id="toc_17">Where to go from here</h4>
+          <h4 id="toc_17">Where to go from here</h4>
 
-    <ul>
-      <li>The elephant in the room: slow build time</li>
-      <li>Continuous Integration</li>
-      <li>UI Testing</li>
-      <li>Snapshot testing</li>
-    </ul>
+          <ul>
+            <li>The elephant in the room: slow build time</li>
+            <li>Continuous Integration</li>
+            <li>UI Testing</li>
+            <li>Snapshot testing</li>
+          </ul>
 
+        </div><!-- col-12 -->
+      </div><!-- row -->
+    </div><!-- container -->
   </body>
 </html>
