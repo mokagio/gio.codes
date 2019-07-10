@@ -2,15 +2,36 @@
   <head>
     <title>TDD | gio.codes</title>
     <link rel="stylesheet" href="simple-grid.min.css"> <!-- https://simplegrid.io/ -->
+<style>
+#hero {
+  border: 1px solid #33344744;
+  padding: .5rem 2%;
+  border-radius: 10px;
+}
+#hero p {
+  font-weight: 400;
+}
+</style>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-12">
+          <div id="hero">
+            <p>📲 Tired of launching the Simulator to manually verify every change you made?</p>
+            <p>🐛 Tired of bugfixes that end up breaking other parts of the app?</p>
+            <p>💪 Want to be confident in the code you write?</p>
+            <p>🏃‍♂️ Want to develop at a steady pace?</p>
+            <p>👉 It's time to adopt Test Driven Developement</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
           <h1>Test Driven Development in Swift</h1>
           <h4>A course by <a href="https://gio.codes">Gio</a>, author of <a href="https://www.mokacoding.com">mokacoding.com</a></h4>
 
-          <h3>Tentative Table of Contents</h3>
+          <h3><em>Tentative</em> Table of Contents</h3>
 
           <h4 id="toc_4">1. Introduction</h4>
           <p><em>What the fuss is all about.</em></p>
@@ -23,7 +44,7 @@
           </ul>
 
           <h4 id="toc_5">2. How to TDD a new object</h4>
-          <p><em>Let's build a list view data source from scratch driven by tests.</em></p>
+          <p><em>Let's build a list view data source from scratch, driven by tests.</em></p>
 
           <!--
             <ul>
